@@ -67,13 +67,9 @@ for age in humans:
 
 print("List of All Ages: ", humanAges)
 
-# a = [name for name in humanNames if name[0] == "D"]
+d = [age_plus_ten+10 for age_plus_ten in humanAges]
 
-# print("Only names that start with 'D': ", a)
-
-# print("Ages plus 10:")
-# d = []
-# print(d)
+print("List of All Ages Increased by 10:", d)
 
 # Write a list comprehension that creates a list of strings which are the name
 # joined to the age with a hyphen, for example "David-31", for all humans.
