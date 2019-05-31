@@ -26,6 +26,14 @@ class GroundVehicle(Vehicle):
     # Sub Class #1 of Vehicle
     pass
 
+class Car(GroundVehicle):
+    # Sub Class A of GroundVehicle
+    pass
+
+class Motorcycle(GroundVehicle):
+    # Sub Class B of GroundVehicle
+    pass
+
 class FlightVehicle(Vehicle):
     # Sub Class #2 of Vehicle
     pass
