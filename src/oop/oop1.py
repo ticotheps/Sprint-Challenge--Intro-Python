@@ -38,4 +38,12 @@ class FlightVehicle(Vehicle):
     # Sub Class #2 of Vehicle
     pass
 
+class Airplane(FlightVehicle):
+    # Sub Class A of FlightVehicle
+    pass
+
+class Starship(FlightVehicle):
+    # Sub Class B of FlightVehicle
+    pass
+
 
