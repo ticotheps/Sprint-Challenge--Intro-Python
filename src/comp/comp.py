@@ -13,6 +13,9 @@ class Human:
 
     def getAgeOnly(self):
         return self.age
+
+    def getNameAndAge(self):
+        return (self.name, str(self.age))
     
 
 humans = [
@@ -72,7 +75,16 @@ d = [age_plus_ten+10 for age_plus_ten in humanAges]
 print("List of All Ages Increased by 10:", d)
 
 # Write a list comprehension that creates a list of strings which are the name
-# joined to the age with a hyphen, for example "David-31", for all humans.
+# joined to the age with a hyphen, for example "David-31", for all humans.'
+
+humanNamesAndAges = []
+
+for nameAndAge in humans:
+    humanNamesAndAges.append(nameAndAge.getNameAndAge())
+
+print("List of All Ages AND Names: ", humanNamesAndAges)
+
+hyphen = "-"
 
 # print("Name hyphen age:")
 # e = []
