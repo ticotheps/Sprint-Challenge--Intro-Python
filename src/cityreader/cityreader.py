@@ -135,4 +135,4 @@ def cityreader_stretch(lat1, lon1, lat2, lon2, cities):
 
     # return within
 
-print(cityreader_stretch(38,2,40,3,cities=[]))
+print(cityreader_stretch(38, 2, 40, 3, newCityInstances))
