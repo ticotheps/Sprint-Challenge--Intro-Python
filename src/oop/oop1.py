@@ -22,3 +22,12 @@ class Vehicle:
     # Base Class
     pass
 
+class GroundVehicle(Vehicle):
+    # Sub Class #1 of Vehicle
+    pass
+
+class FlightVehicle(Vehicle):
+    # Sub Class #2 of Vehicle
+    pass
+
+
