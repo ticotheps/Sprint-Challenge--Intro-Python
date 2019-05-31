@@ -17,6 +17,9 @@ class Human:
     def getNameAndAge(self):
         return (self.name, str(self.age))
     
+    def getNameAndIntAge(self):
+        return (self.name, self.age)
+    
 
 humans = [
     Human("Alice", 29),
@@ -94,9 +97,18 @@ print("List of All Names JOINED with Ages (using a hyphen): ", e)
 # age, for example ("David", 31), for everyone between the ages of 27 and 32,
 # inclusive.
 
-# print("Names and ages between 27 and 32:")
-# f = []
-# print(f)
+namesAndIntAges = []
+
+for nameAndIntAge in humans:
+    namesAndIntAges.append(nameAndIntAge.getNameAndIntAge())
+
+print("List of All Names AND Integer Ages: ", namesAndIntAges)
+
+tupleNamesAndIntAges = tuple(namesAndIntAges)
+
+f = [specificAge for specificAge in tupleNamesAndIntAges if specificAge[1] >= 27 and specificAge[1] <= 32]
+
+print("Tuple of All Names JOINED with Ages, between ages 27-32 (inclusive): ", f)
 
 # Write a list comprehension that creates a list of new Humans like the old
 # list, except with all the names uppercase and the ages with 5 added to them.
