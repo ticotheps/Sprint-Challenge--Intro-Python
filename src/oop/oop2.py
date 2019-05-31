@@ -31,8 +31,9 @@ class Motorcycle(GroundVehicle):
         self.num_wheels = num_wheels
         self.new_sound = "BRAAAP!!"
     def drive(self):
-        return f"Motorcycle Name: {self.name}, Number of Wheels: {self.num_wheels}"
-        # return self.new_sound + self.num_wheels
+        # Tico's Ducati Example
+        # return f"Motorcycle Name: {self.name}, Number of Wheels: {self.num_wheels}"
+        return self.new_sound
 
 y = Motorcycle("Ducati", 4)
 
