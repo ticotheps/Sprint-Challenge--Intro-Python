@@ -10,6 +10,9 @@ class Human:
 
     def getNameOnly(self):
         return self.name
+
+    def getAgeOnly(self):
+        return self.age
     
 
 humans = [
@@ -55,11 +58,18 @@ c = [name for name in humanNames if C_through_G.find(name[0]) >= 0]
 
 print("Only names that start with a letter between 'C' and 'G', inclusive: ", c)
 
-# print("Starts between C and G, inclusive:")
-# c = []
-# print(c)
-
 # Write a list comprehension that creates a list of all the ages plus 10.
+
+humanAges = []
+
+for age in humans:
+    humanAges.append(age.getAgeOnly())
+
+print("List of All Ages: ", humanAges)
+
+# a = [name for name in humanNames if name[0] == "D"]
+
+# print("Only names that start with 'D': ", a)
 
 # print("Ages plus 10:")
 # d = []
