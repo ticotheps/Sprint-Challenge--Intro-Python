@@ -9,7 +9,7 @@ class City:
         self.lat = lat
         self.lon = lon
     def __repr__(self):
-        return f"Name: {self.name}, Lat: {self.lat}, Lon: {self.lon}" + "\n"
+        return f"<City: {self.name}, {self.lat}, {self.lon}>"
 
 
 
@@ -38,7 +38,10 @@ def cityreader(cities=[]):
             if row[0] == "city":
                 pass
             else:
-                city = City(row[0], row[3], row[4])
+                name = str(row[0])
+                lat = float(row[3])
+                lon = float(row[4])
+                city = City(name, lat, lon)
                 cities.append(city)
     return cities
 
