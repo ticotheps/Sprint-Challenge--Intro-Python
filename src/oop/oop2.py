@@ -25,7 +25,18 @@ print(x.drive())
 #
 # Override the drive() method in Motorcycle so that it returns "BRAAAP!!"
 
-# TODO
+class Motorcycle(GroundVehicle):
+    def __init__(self, name, num_wheels=2):
+        super().__init__(name, num_wheels)
+        self.num_wheels = num_wheels
+        self.new_sound = "BRAAAP!!"
+    def drive(self):
+        return f"Motorcycle Name: {self.name}, Number of Wheels: {self.num_wheels}"
+        # return self.new_sound + self.num_wheels
+
+y = Motorcycle("Ducati", 4)
+
+print(y.drive())
 
 # vehicles = [
 #     GroundVehicle(),
