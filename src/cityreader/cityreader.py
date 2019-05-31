@@ -45,7 +45,8 @@ def cityreader(cities=[]):
                 cities.append(city)
     return cities
 
-print(cityreader(cities))
+newCityInstances = cityreader(cities)
+print(newCityInstances)
 
 # Print the list of cities (name, lat, lon), 1 record per line.
 
@@ -85,7 +86,7 @@ for c in cities:
 
 matchingLatCities = []
 
-def cityreader_stretch(lat1, lon1, lat2, lon2, cities=[]):
+def cityreader_stretch(lat1, lon1, lat2, lon2, cities):
     lat1 = float(input("What is the latitude of your 1st coordinate? "))
     lon1 = float(input("What is the longitude of your 1st coordinate? "))
     lat2 = float(input("What is the latitude of your 2nd coordinate? "))
@@ -94,30 +95,38 @@ def cityreader_stretch(lat1, lon1, lat2, lon2, cities=[]):
     # within will hold the cities that fall within the specified region
     if lat1 - lat2 < 0:
         # Example: lat1 = 38, lat2 = 40
-        # Example: lon1 = -120, lon2 = -100
-
-        # for cityLatInRange in cities:
-        #     if cityLatInRange.lat >= lat1 and cityLatInRange.lon <= lat2:
-        #         matchingLatCities.append(cityLatInRange)
-        # return matchingLatCities
-
+        # Example: lon1 = -100, lon2 = -120
         if lon1 - lon2 < 0:
-            return "lat1 is smaller + lon1 is smaller"
+            for matchCityLat in cities:
+                # if matchCityLat.lat >= lat1 and matchCityLat.lon <= lat2:
+                #     matchingLatCities.append(matchCityLat)
+                print(matchCityLat)
+            # return matchingLatCities
+            # return "lat1 is smaller + lon1 is smaller"
         elif lon1 - lon2 > 0:
-            return "lat1 is smaller + lon1 is larger"
+            for matchCityLat in cities:
+                # if matchCityLat.lat >= lat1 and matchCityLat.lon <= lat2:
+                #     matchingLatCities.append(matchCityLat)
+                print(matchCityLat)
+            # return matchingLatCities
+            # return "lat1 is smaller + lon1 is larger"
     elif lat1 - lat2 > 0:
         # Example: lat1 = 38, lat2 = 40
-        # Example: lon1 = -120, lon2 = -100
-
-        # for cityLatInRange in cities:
-        #     if cityLatInRange.lat >= lat2 and cityLatInRange.lon <= lat1:
-        #         matchingLatCities.append(cityLatInRange)
-        # return matchingLatCities
-
+        # Example: lon1 = -100, lon2 = -120
         if lon1 - lon2 < 0:
-            return "lat1 is larger + lon1 is smaller"
+            for matchCityLat in cities:
+                # if matchCityLat.lat >= lat2 and matchCityLat.lon <= lat1:
+                #     matchingLatCities.append(matchCityLat)
+                print(matchCityLat)
+            # return matchingLatCities
+            # return "lat1 is larger + lon1 is smaller"
         elif lon1 - lon2 > 0:
-            return "lat1 is larger + lon1 is larger"
+            for matchCityLat in cities:
+                # if matchCityLat.lat >= lat2 and matchCityLat.lon <= lat1:
+                #     matchingLatCities.append(matchCityLat)
+                print(matchCityLat)
+            # return matchingLatCities
+            # return "lat1 is larger + lon1 is larger"
 
 
     # TODO Ensure that the lat and lon values are all floats
