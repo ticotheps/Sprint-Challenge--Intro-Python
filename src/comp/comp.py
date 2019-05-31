@@ -86,9 +86,9 @@ print("List of All Ages AND Names: ", humanNamesAndAges)
 
 hyphen = "-"
 
-# print("Name hyphen age:")
-# e = []
-# print(e)
+e = [hyphen.join(namePlusAge) for namePlusAge in humanNamesAndAges]
+
+print("List of All Names JOINED with Ages (using a hyphen): ", e)
 
 # Write a list comprehension that creates a list of tuples containing name and
 # age, for example ("David", 31), for everyone between the ages of 27 and 32,
