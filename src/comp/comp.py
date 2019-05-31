@@ -18,8 +18,7 @@ class Human:
         return (self.name, str(self.age))
     
     def getNameAndIntAge(self):
-        return (self.name, self.age)
-    
+        return (self.name, self.age)  
 
 humans = [
     Human("Alice", 29),
@@ -39,8 +38,8 @@ humans = [
 
 humanNames = []
 
-for name in humans:
-    humanNames.append(name.getNameOnly())
+for humanName in humans:
+    humanNames.append(humanName.getNameOnly())
 
 print("List of All Names: ", humanNames, "\n")
 
@@ -114,7 +113,14 @@ print("Tuple of All Names JOINED with Ages, between ages 27-32 (inclusive): ", f
 # list, except with all the names uppercase and the ages with 5 added to them.
 # The "humans" list should be unmodified.
 
-g = [(f"<Human: {nameAndIntAgeEntry[0].upper()}, {nameAndIntAgeEntry[1]+5}>") for nameAndIntAgeEntry in namesAndIntAges]
+newHumans = []
+
+for newHumanObject in humans:
+    newHumanObject.name = newHumanObject.name.upper()
+    newHumanObject.age = newHumanObject.age + 5
+    newHumans.append(newHumanObject)
+
+g = [modifiedHuman for modifiedHuman in newHumans]
 
 print("List of All Names with Capitalized Letters and Ages Increased by 5: ", g, "\n")
 
