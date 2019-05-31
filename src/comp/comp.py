@@ -33,18 +33,18 @@ humanNames = []
 for name in humans:
     humanNames.append(name.getNameOnly())
 
-print(humanNames)
+print("List of All Names: ", humanNames)
 
 a = [name for name in humanNames if name[0] == "D"]
 
-print("Names in 'humanNames' that start with 'D': ", a)
+print("Only names that start with 'D': ", a)
 
 # Write a list comprehension that creates a list of names of everyone
 # whose name ends in "e".
 
-# print("Ends with e:")
-# b = []
-# print(b)
+b = [name for name in humanNames if name[-1] == "e"]
+
+print("Only names that end with 'e': ", b)
 
 # Write a list comprehension that creates a list of names of everyone
 # whose name starts with any letter between 'C' and 'G' inclusive.
