@@ -49,6 +49,12 @@ print("Only names that end with 'e': ", b)
 # Write a list comprehension that creates a list of names of everyone
 # whose name starts with any letter between 'C' and 'G' inclusive.
 
+C_through_G = "CDEFG"
+
+c = [name for name in humanNames if C_through_G.find(name[0]) >= 0]
+
+print("Only names that start with a letter between 'C' and 'G', inclusive: ", c)
+
 # print("Starts between C and G, inclusive:")
 # c = []
 # print(c)
