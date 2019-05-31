@@ -114,9 +114,9 @@ print("Tuple of All Names JOINED with Ages, between ages 27-32 (inclusive): ", f
 # list, except with all the names uppercase and the ages with 5 added to them.
 # The "humans" list should be unmodified.
 
-# print("All names uppercase:")
-# g = []
-# print(g)
+g = [(f"<Human: {nameAndIntAgeEntry[0].upper()}, {nameAndIntAgeEntry[1]+5}>") for nameAndIntAgeEntry in namesAndIntAges]
+
+print("List of All Names with Capitalized Letters and Ages Increased by 5: ", g)
 
 # Write a list comprehension that contains the square root of all the ages.
 
