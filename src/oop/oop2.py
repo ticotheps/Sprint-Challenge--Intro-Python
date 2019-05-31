@@ -4,16 +4,18 @@
 # object is constructed.
 
 class GroundVehicle():
-    def __init__(self, name, num_wheels):
+    def __init__(self, name, num_wheels=4):
         self.name = name
         self.num_wheels = num_wheels
 
-    def Drive(self):
-        return f"Vehicle Name: {self.name}, Number of Wheels: {self.num_wheels}"
+    def drive(self):
+        # Tico's Tesla Example
+        # return f"Vehicle Name: {self.name}, Number of Wheels: {self.num_wheels}"
+        return "vroooom"
 
-x = GroundVehicle("Tesla", 4)
+x = GroundVehicle("Tesla", 6)
 
-print(x.Drive())
+print(x.drive())
 
 
 # Subclass Motorcycle from GroundVehicle.
