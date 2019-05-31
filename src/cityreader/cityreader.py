@@ -90,24 +90,34 @@ def cityreader_stretch(lat1, lon1, lat2, lon2, cities=[]):
     lon1 = float(input("What is the longitude of your 1st coordinate? "))
     lat2 = float(input("What is the latitude of your 2nd coordinate? "))
     lon2 = float(input("What is the longitude of your 2nd coordinate? "))
-    
+
     # within will hold the cities that fall within the specified region
     if lat1 - lat2 < 0:
-        # Example: lat1 = 3, lat2 = 5
-        # return "lat1 is smaller"
+        # Example: lat1 = 38, lat2 = 40
+        # Example: lon1 = -120, lon2 = -100
 
-        for cityLatInRange in cities:
-            if cityLatInRange.lat >= lat1 and cityLatInRange.lon <= lat2:
-                matchingLatCities.append(cityLatInRange)
-        return matchingLatCities
+        # for cityLatInRange in cities:
+        #     if cityLatInRange.lat >= lat1 and cityLatInRange.lon <= lat2:
+        #         matchingLatCities.append(cityLatInRange)
+        # return matchingLatCities
+
+        if lon1 - lon2 < 0:
+            return "lat1 is smaller + lon1 is smaller"
+        elif lon1 - lon2 > 0:
+            return "lat1 is smaller + lon1 is larger"
     elif lat1 - lat2 > 0:
-        # Example: lat1 = 3, lat2 = 5
-        # return "lat1 is larger"
+        # Example: lat1 = 38, lat2 = 40
+        # Example: lon1 = -120, lon2 = -100
 
-        for cityLatInRange in cities:
-            if cityLatInRange.lat >= lat2 and cityLatInRange.lon <= lat1:
-                matchingLatCities.append(cityLatInRange)
-        return matchingLatCities
+        # for cityLatInRange in cities:
+        #     if cityLatInRange.lat >= lat2 and cityLatInRange.lon <= lat1:
+        #         matchingLatCities.append(cityLatInRange)
+        # return matchingLatCities
+
+        if lon1 - lon2 < 0:
+            return "lat1 is larger + lon1 is smaller"
+        elif lon1 - lon2 > 0:
+            return "lat1 is larger + lon1 is larger"
 
 
     # TODO Ensure that the lat and lon values are all floats
