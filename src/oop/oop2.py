@@ -4,10 +4,18 @@
 # object is constructed.
 
 class GroundVehicle():
-    def __init__(self, num_wheels):
+    def __init__(self, name="Generic Ground Vehicle Name", num_wheels=4):
+        self.name = name
         self.num_wheels = num_wheels
 
-    # TODO
+    def drive(self):
+        # Tico's Tesla Example
+        # return f"Vehicle Name: {self.name}, Number of Wheels: {self.num_wheels}"
+        return "vroooom"
+
+x = GroundVehicle("Tesla", 6)
+
+print(x.drive())
 
 
 # Subclass Motorcycle from GroundVehicle.
@@ -17,7 +25,19 @@ class GroundVehicle():
 #
 # Override the drive() method in Motorcycle so that it returns "BRAAAP!!"
 
-# TODO
+class Motorcycle(GroundVehicle):
+    def __init__(self, name="Generic Motorcycle Name", num_wheels=2):
+        super().__init__(name, num_wheels)
+        self.num_wheels = num_wheels
+        self.new_sound = "BRAAAP!!"
+    def drive(self):
+        # Tico's Ducati Example
+        # return f"Motorcycle Name: {self.name}, Number of Wheels: {self.num_wheels}"
+        return self.new_sound
+
+y = Motorcycle("Ducati", 4)
+
+print(y.drive())
 
 vehicles = [
     GroundVehicle(),
@@ -29,4 +49,5 @@ vehicles = [
 
 # Go through the vehicles list and print the result of calling drive() on each.
 
-# TODO
+for vehicle in vehicles:
+    print(vehicle.drive())
